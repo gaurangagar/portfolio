@@ -31,6 +31,14 @@ export default function Home() {
           >
             Get in touch
           </a>
+          <a
+            href={profile.resumeHref}
+            target="_blank"
+            rel="noreferrer"
+            className="underline-fade flex items-center px-1 py-3 text-ink hover:text-signal"
+          >
+            Download resume ↓
+          </a>
         </div>
       </section>
 

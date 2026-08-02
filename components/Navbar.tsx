@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { profile } from "@/lib/data";
 
 const links = [
   { href: "/", label: "Home" },
@@ -44,6 +45,16 @@ export default function Navbar() {
               </li>
             );
           })}
+          <li>
+            <a
+              href={profile.resumeHref}
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-full border border-line px-4 py-1.5 text-ink transition-colors hover:border-signal hover:text-signal"
+            >
+              Resume ↓
+            </a>
+          </li>
         </ul>
 
         {/* Mobile toggle */}
@@ -76,6 +87,17 @@ export default function Navbar() {
               </li>
             );
           })}
+          <li>
+            <a
+              href={profile.resumeHref}
+              target="_blank"
+              rel="noreferrer"
+              onClick={() => setOpen(false)}
+              className="block py-2 text-signal"
+            >
+              Resume ↓
+            </a>
+          </li>
         </ul>
       )}
     </header>

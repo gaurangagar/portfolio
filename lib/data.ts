@@ -13,6 +13,8 @@ export const profile = {
     label: "github.com/gaurangagar",
     href: "https://github.com/gaurangagar",
   },
+  resumeHref:
+    "https://drive.google.com/uc?export=download&id=1mr9-0ujnUKPOGdBUua3k1JrQFMUw5bpv",
 };
 
 export const education = {
@@ -110,7 +112,7 @@ export const ratings: RatingEntry[] = [
     handle: "gaurangagarwal26",
     handleHref: "https://leetcode.com/u/gaurangagarwal26/",
     tier: "Knight",
-    rating: 2029,
+    rating: 2005,
     max: 2200,
     color: "#F6B93B",
   },
