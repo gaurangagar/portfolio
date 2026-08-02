@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F7F7F4;
+  color: #14171A;
+}
+
+::selection {
+  background-color: #03948A;
+  color: #F7F7F4;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* visible keyboard focus ring, theme-matched */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #03948A;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.underline-fade {
+  background-image: linear-gradient(#03948A, #03948A);
+  background-size: 0% 1.5px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.25s ease;
+}
+.underline-fade:hover,
+.underline-fade:focus-visible {
+  background-size: 100% 1.5px;
+}
