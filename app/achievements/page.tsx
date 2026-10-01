@@ -33,7 +33,18 @@ export default function AchievementsPage() {
         <ul className="mt-6 flex flex-col divide-y divide-line">
           {achievements.map((a, i) => (
             <li key={i} className="flex flex-col gap-1 py-5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6">
-              <span className="font-medium text-ink">{a.title}</span>
+              {a.href ? (
+                <a
+                  href={a.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-medium text-ink underline-fade hover:text-signal"
+                >
+                  {a.title}
+                </a>
+              ) : (
+                <span className="font-medium text-ink">{a.title}</span>
+              )}
               <span className="text-sm text-muted sm:max-w-md sm:text-right">
                 {a.detail}
               </span>
